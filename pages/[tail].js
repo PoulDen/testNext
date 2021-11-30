@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { getPost } from "./services/postService";
+import { getPost } from "./../services/postService";
 
 export default function Post({ data }) {
   return (
