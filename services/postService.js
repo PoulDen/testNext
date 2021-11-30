@@ -1,5 +1,5 @@
 import { GET_ONE_LONG_TAIL } from "../../query/TailQuery";
-import client from "../../apollo-client";
+import client from "./../apollo-client";
 import path from "path";
 import fs from "fs";
 
