@@ -4,14 +4,13 @@ import { GET_LONG_TAILS } from "./../query/TailQuery";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const { loading, error, data } = useQuery(GET_LONG_TAILS);
+  const { data } = useQuery(GET_LONG_TAILS);
   if (!data)
     return (
       <div className={styles.container}>
         <p>"loading"</p>
       </div>
     );
-  console.log(loading, error, data);
   return (
     <div className={styles.container}>
       {data.long_tails.map((i) => {

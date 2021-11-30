@@ -1,11 +1,11 @@
 import styles from "../styles/Home.module.css";
 import { getPost } from "./../services/postService";
 
-export default function Post({ data }) {
+export default function Post({ post }) {
   return (
     <div className={styles.container}>
-      <p>Title: {data.title}</p>
-      <p>Description: {data.description}</p>
+      <p>Title: {post.title}</p>
+      <p>Description: {post.description}</p>
     </div>
   );
 }
@@ -17,10 +17,9 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params: { tail } }) {
-  const getPosts = await getPost(tail);
   return {
     props: {
-      data: getPosts[0],
+      post: await getPost(tail),
     },
   };
 }

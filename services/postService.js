@@ -12,7 +12,7 @@ export const getPost = async (tail) => {
   });
   const fileToRead = path.join(process.cwd(), "data.json");
   const fileData = JSON.parse(await fs.readFileSync(fileToRead));
-  return fileData.filter(
+  return fileData.find(
     ({ id }) => id === data.long_tails_aggregate.nodes[0].json_id
   );
 };
