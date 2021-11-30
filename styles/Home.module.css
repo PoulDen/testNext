@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 150px;
+}
+.link {
+  margin-bottom: 20px;
+}
+.link a {
+  font-size: 3em;
+}
+.container p {
+  font-size: 3em;
+}
